@@ -15,15 +15,15 @@ plmdca_link_args = ["-fopenmp", "-O3"]
 
 
 plmdca_ext = Extension(
-    'pyfitness.plmdca._plmdcaBackend',
+    'pycofitness.plmdca._plmdcaBackend',
     [   
-        'pyfitness/plmdca/lbfgs/lib/lbfgs.cpp',
-        'pyfitness/plmdca/plmdca_numerics.cpp',
-        'pyfitness/plmdca/plmdcaBackend.cpp', 
+        'pycofitness/plmdca/lbfgs/lib/lbfgs.cpp',
+        'pycofitness/plmdca/plmdca_numerics.cpp',
+        'pycofitness/plmdca/plmdcaBackend.cpp', 
     ],
     include_dirs=[
-        'pyfitness/plmdca/include/',
-        'pyfitness/plmdca/lbfgs/include/',
+        'pycofitness/plmdca/include/',
+        'pycofitness/plmdca/lbfgs/include/',
     ],
     extra_compile_args = plmdca_compile_args,
     extra_link_args = plmdca_link_args,
@@ -31,7 +31,7 @@ plmdca_ext = Extension(
 )
 
 setup(
-    name="py-fitness",
+    name="pycofitness",
     version="1.0",
     author="Fabrizio Pucci, Mehari B. Zerihun",
     author_email="Fabrizio.Pucci@ulb.be, mbzerihun@gmail.com",
@@ -39,8 +39,8 @@ setup(
     description="<i>In silico</i> mutagenesis of protein and RNA sequences using coevolution",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/KIT-MBS/pyfitness",
-    download_url="https://pypi.org/project/pyfitness/",
+    url="https://github.com/KIT-MBS/pycofitness",
+    download_url="https://pypi.org/project/pycofitness/",
     packages=find_packages(
         exclude=["*.tests","*.tests.*","tests.*", "tests",
             "examples", "*.examples", "examples.*", "*.examples.*",
@@ -61,7 +61,7 @@ setup(
     entry_points={
         "console_scripts":[
 
-            "pyfitness=pyfitness.main:run_mutation",
+            "pycofitness=pycofitness.main:run_mutation",
         ],
     },
     test_suite="tests",

@@ -1,24 +1,24 @@
-# About `py-fitness`
-`py-fitness` is Python implemementation of *in silico* mutagenesis for multipe sequence alignments (MSA) of protein or RNA sequence families using **__pseudolikelihood maximization__**  direct couplings analysis (DCA) algorithm. The input file for `py-fitness` must be an MSA of sequences in fasta format, with the first sequence representing the reference sequence. The software provides command line utilities or it can be used as a Python library. 
+# About `pycofitness`
+`pycofitness` is Python implemementation of *in silico* mutagenesis for multipe sequence alignments (MSA) of protein or RNA sequence families using **__pseudolikelihood maximization__**  direct couplings analysis (DCA) algorithm. The input file for `pycofitness` must be an MSA of sequences in fasta format, with the first sequence representing the reference sequence. The software provides command line utilities or it can be used as a Python library. 
 
 # Prerequisites
-`py-fitness` is implemented mainly in Python with the pseudolikelihood maximization parameter inference part implemented using C++ backend to enable parallelization. It requires: 
+`pycofitness` is implemented mainly in Python with the pseudolikelihood maximization parameter inference part implemented using C++ backend to enable parallelization. It requires: 
 * Python 3
 * C++ compiler that supports C++11, e.g., the GNU compiler collection (GCC)
 * Optionally, OpenMP for multithreading support
 
 
 # Installing
-To install the current version of `py-fitness` from PyPI, run on the command line
+To install the current version of `pycofitness` from PyPI, run on the command line
 ```bash
-$ pip install py-fitness
+$ pip install pycofitness
 ```
 
-# Using `py-fitness` as a Python Library
-After installation, `py-fitness` can be imported into other Python source codes and used. For example,  
+# Using `pycofitness` as a Python Library
+After installation, `pycofitness` can be imported into other Python source codes and used. For example,  
 
 ```python 
-from pyfitness.mutation import PointMutation
+from pycofitness.mutation import PointMutation
 
 point_mutation = PointMutation(msa_file, biomelcule)
 deltas = point_mutation.delphi_epistatic()
@@ -44,15 +44,15 @@ point_mutation = PointMutation(msa_file, biomolecule,
 where `max_iterations` is the number of maximum iterations for gradient decent, `num_threads` is the number of 
 threads for parallel execution, `seqid` is sequence identity cut off value (if sequences have similarity more that this value, they are regarded as the same), `lambda_J` and `lambda_h` are penalizing constants for L2 regularization. If `verbose` is set to be `True`, logging information is enabled.
 
-# Running `py-fitness` From Command Line
-When `py-fitness` is installed, it provides a command `py-fitness` that can be executed from the command line.
+# Running `pycofitness` From Command Line
+When `pycofitness` is installed, it provides a command `pycofitness` that can be executed from the command line.
 For example:
 ```bash
-$ pyfitness <biomolecule> <msa_file> --num_threads=4 --verbose
+$ pycofitness <biomolecule> <msa_file> --num_threads=4 --verbose
 ``` 
 where `<biomolecule>` refers values "protein" or "RNA" (case insensitive) and `<msa_file>` is the MSA file. 
 
 Information about command line options can be obtained using: 
 ```bash
-$ pyfitness --help
+$ pycofitness --help
 ```

@@ -1,4 +1,4 @@
-from pyfitness.mutation.mutation import PointMutation
+from pycofitness.mutation.mutation import PointMutation
 from .input_files_path import InputFilesPath
 import unittest
 
