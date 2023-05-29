@@ -31,7 +31,7 @@ plmdca_ext = Extension(
 )
 
 setup(
-    name="pyfitness",
+    name="py-fitness",
     version="1.0",
     author="Fabrizio Pucci, Mehari B. Zerihun",
     author_email="Fabrizio.Pucci@ulb.be, mbzerihun@gmail.com",
@@ -39,8 +39,8 @@ setup(
     description="<i>In silico</i> mutagenesis of protein and RNA sequences using coevolution",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/KIT-MBS/pyFitness",
-    download_url="https://pypi.org/project/pyFitness/",
+    url="https://github.com/KIT-MBS/pyfitness",
+    download_url="https://pypi.org/project/pyfitness/",
     packages=find_packages(
         exclude=["*.tests","*.tests.*","tests.*", "tests",
             "examples", "*.examples", "examples.*", "*.examples.*",
