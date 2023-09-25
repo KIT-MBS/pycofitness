@@ -1,5 +1,4 @@
-![img|320x271](Logo.png)
-![Screenshot](Logo.png=250x250)
+![Screenshot](Logo.png)
 
 # About `pycofitness`
 `pycofitness` is Python implemementation of *in silico* mutagenesis for multipe sequence alignments (MSA) of protein or RNA sequence families using **__pseudolikelihood maximization__**  direct couplings analysis (DCA) algorithm. The input file for `pycofitness` must be an MSA of sequences in fasta format, with the first sequence representing the reference sequence. The software provides command line utilities or it can be used as a Python library. 
