@@ -1,3 +1,4 @@
+![img|320x271](Logo.png)
 ![Screenshot](Logo.png=250x250)
 
 # About `pycofitness`
