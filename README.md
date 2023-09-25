@@ -1,6 +1,5 @@
-<div style="width: 20%; height: 20%">
 ![Screenshot](Logo.png)
-</div>
+
 
 
 
