@@ -54,7 +54,7 @@ For example:
 ```bash
 $ pycofitness <biomolecule> <msa_file> --num_threads=4 --verbose
 ``` 
-where `<biomolecule>` refers values "protein" or "RNA" (case insensitive) and `<msa_file>` is the MSA file. 
+where `<biomolecule>` refers values "protein" or "RNA" (case insensitive) and `<msa_file>` is the MSA file in the fasta format. 
 
 Information about command line options can be obtained using: 
 ```bash
@@ -63,5 +63,7 @@ $ pycofitness --help
 
 # Preprocessing input MSAs
 
-
+The input data for pycofitness is an MSA file in fasta format. We chose not to include alignment and curation tools in pycofitness, because in this way users can employ
+their favorite alignment methods and, in addition, curate and correct the input MSA. There is only one compulsory adjustment within the input MSA: the sequence
+to mutate has to be positioned as the first one in the MSA.
 
