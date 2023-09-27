@@ -60,3 +60,7 @@ Information about command line options can be obtained using:
 ```bash
 $ pycofitness --help
 ```
+# Preprocessing input MSAs
+
+
+
