@@ -24,7 +24,7 @@ After installation, `pycofitness` can be imported into other Python source codes
 ```python 
 from pycofitness.mutation import PointMutation
 
-point_mutation = PointMutation(msa_file, biomelcule)
+point_mutation = PointMutation(msa_file, biomolecule)
 deltas = point_mutation.delphi_epistatic()
 #print the values of delta_dict by iteration over sites and bases/residues
 
