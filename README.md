@@ -58,16 +58,20 @@ The optional arguments that pycofitness input command has are listed here:
 
 `-h, --help:` show the help message
 
-`--seqid SEQID :` Allow the choice of the SEQID cut-off value of sequences similarity above which sequences are lumped together in the calculation of frequencies.
+`--seqid SEQID :` SEQID cut-off value of sequences similarity above which sequences are lumped together in the calculation of frequencies.
 
-`--lambda_J LAMBDA_J :` LAMBDA_J is the value of fields penalizing constant for L2 regularization of fields in the pseudolikelyhood maximization inference (see [here](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bioinformatics/36/7/10.1093_bioinformatics_btz892/2/bioinformatics_36_7_2264_s2.pdf?Expires=1702572670&Signature=02fkMyK1WmMFw69v-CfRjpNnzeLsLetV7xNIyi6RGIbgMYTyWjckjd4jxtF6XseVwe5E8JL2v4mWdUXm26C5pMtl5zlaN8zrWDanolXkgLI6dMK~9DvP-mZtEbQus49g34~wi7w~nXbBBtdzzlyFYLTlM1HIMn8i2TRzVAEKECdq~4UAccxZ1MIo1-A-fhsBqb8ZS0n7wqeimPFimgq~Tvi3nmiI1h0ud7eNh7JSaDQ-WPdIKRACOPEd1m1w5EP79NqgUuSlQvuKxnHvORaWwdTcZW0EtLpYk5-TtJWxU5szujvlrFCnSeFDeDWpX5darWr~O8Q35NfZaUsi0N8yCw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA) for more details).
+`--lambda_h LAMBDA_h :` LAMBDA_H is the value of penalizing constant for L2 regularization of fields in the pseudolikelyhood maximization DCA inference step (see [here](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bioinformatics/36/7/10.1093_bioinformatics_btz892/2/bioinformatics_36_7_2264_s2.pdf?Expires=1702572670&Signature=02fkMyK1WmMFw69v-CfRjpNnzeLsLetV7xNIyi6RGIbgMYTyWjckjd4jxtF6XseVwe5E8JL2v4mWdUXm26C5pMtl5zlaN8zrWDanolXkgLI6dMK~9DvP-mZtEbQus49g34~wi7w~nXbBBtdzzlyFYLTlM1HIMn8i2TRzVAEKECdq~4UAccxZ1MIo1-A-fhsBqb8ZS0n7wqeimPFimgq~Tvi3nmiI1h0ud7eNh7JSaDQ-WPdIKRACOPEd1m1w5EP79NqgUuSlQvuKxnHvORaWwdTcZW0EtLpYk5-TtJWxU5szujvlrFCnSeFDeDWpX5darWr~O8Q35NfZaUsi0N8yCw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA) for more details).
 
-  --lambda_J LAMBDA_J   Value of couplings penalizing constant for L2
-                        regularization of couplings.
-`--lambda_h`
+`--lambda_J LAMBDA_J :` LAMBDA_J is the value of penalizing constant for L2 regularization of couplings in the pseudolikelyhood maximization DCA inference step (see [here](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bioinformatics/36/7/10.1093_bioinformatics_btz892/2/bioinformatics_36_7_2264_s2.pdf?Expires=1702572670&Signature=02fkMyK1WmMFw69v-CfRjpNnzeLsLetV7xNIyi6RGIbgMYTyWjckjd4jxtF6XseVwe5E8JL2v4mWdUXm26C5pMtl5zlaN8zrWDanolXkgLI6dMK~9DvP-mZtEbQus49g34~wi7w~nXbBBtdzzlyFYLTlM1HIMn8i2TRzVAEKECdq~4UAccxZ1MIo1-A-fhsBqb8ZS0n7wqeimPFimgq~Tvi3nmiI1h0ud7eNh7JSaDQ-WPdIKRACOPEd1m1w5EP79NqgUuSlQvuKxnHvORaWwdTcZW0EtLpYk5-TtJWxU5szujvlrFCnSeFDeDWpX5darWr~O8Q35NfZaUsi0N8yCw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA) for more details).
 
+`--max_iterations MAX_ITERATIONS : ` MAX_ITERATIONS is number of maximum iterations for gradient descent in the negative pseudolikelihood minimization step.
 
+ `--num_threads NUM_THREADS :` number of threads used in the computation.
 
+ `--output_dir OUTPUT_DIR :` Directory path to which output results are written. If the directory is not existing, it will be created. If this path is not provided, an output directory is created using the base name of the MSA file, with "output_" prefix added to it.
+
+ `--verbose :` Show logging information on the terminal.
+ 
 
 Information about command line options can be obtained using: 
 ```bash
