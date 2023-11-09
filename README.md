@@ -56,12 +56,33 @@ $ pycofitness <biomolecule> <msa_file> --num_threads=4 --verbose
 where `<biomolecule>` refers to values "protein" or "RNA" (case insensitive) and `<msa_file>` is the MSA file in the fasta format. 
 The optional arguments that pycofitness input command has are listed here:
 
-`--num_threads`
+`-h, --help `: show the help message
+
+`--seqid SEQID`: Allow the choice of the cut-off value of sequences similarity above which they are lumped together in the calculation of frequencies.
+
 `--verbose`
 `--lambda_J`
 `--lambda_h`
 
-
+-h, --help            show this help message and exit
+  --seqid SEQID         Cut-off value of sequences similarity above which they
+                        are lumped together.
+  --lambda_h LAMBDA_H   Value of fields penalizing constant for L2
+                        regularization of fields.
+  --lambda_J LAMBDA_J   Value of couplings penalizing constant for L2
+                        regularization of couplings.
+  --max_iterations MAX_ITERATIONS
+                        Number of iterations for gradient decent for negative
+                        pseudolikelihood minimization.
+  --num_threads NUM_THREADS
+                        Number of threads from plmDCA computation
+  --verbose             Show logging information on the terminal.
+  --output_dir OUTPUT_DIR
+                        Directory path to which output results are written. If
+                        the directory is not existing, it will be created. If
+                        this path is not provided, an output directory is
+                        created using the base name of the MSA file, with
+                        "output_" prefix added to it.
 
 
 
