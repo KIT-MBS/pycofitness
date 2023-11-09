@@ -17,7 +17,7 @@ More information about pycofitness can be found in the [associated paper](www.go
 
 # Installing
 
-One can install `pycofitness` from PyPI or from this repository. To install the current version of `pycofitness` from PyPI, run the command line
+`pycofitness` can be installed from PyPI or from this repository. To install the current version of `pycofitness` from PyPI, run the command line
 
 ```bash
 $ pip install pycofitness
@@ -25,7 +25,7 @@ $ pip install pycofitness
 The alternative way is to clone this repository and install pycofitness as 
 
 ```bash
-$ git clone
+$ git clone https://github.com/KIT-MBS/pycofitness/
 $ cd pycofitness
 $ python setup.py install
 ```
