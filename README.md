@@ -56,12 +56,14 @@ $ pycofitness <biomolecule> <msa_file> --num_threads=4 --verbose
 where `<biomolecule>` refers to values "protein" or "RNA" (case insensitive) and `<msa_file>` is the MSA file in the fasta format. 
 The optional arguments that pycofitness input command has are listed here:
 
-`-h, --help `: show the help message
+`-h, --help:` show the help message
 
-`--seqid SEQID`: Allow the choice of the cut-off value of sequences similarity above which they are lumped together in the calculation of frequencies.
+`--seqid SEQID :` Allow the choice of the SEQID cut-off value of sequences similarity above which sequences are lumped together in the calculation of frequencies.
 
-`--verbose`
-`--lambda_J`
+`--lambda_J LAMBDA_J :` LAMBDA_J is the value of fields penalizing constant for L2 regularization of fields in the pseudolikelyhood maximization inference (see [here](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bioinformatics/36/7/10.1093_bioinformatics_btz892/2/bioinformatics_36_7_2264_s2.pdf?Expires=1702572670&Signature=02fkMyK1WmMFw69v-CfRjpNnzeLsLetV7xNIyi6RGIbgMYTyWjckjd4jxtF6XseVwe5E8JL2v4mWdUXm26C5pMtl5zlaN8zrWDanolXkgLI6dMK~9DvP-mZtEbQus49g34~wi7w~nXbBBtdzzlyFYLTlM1HIMn8i2TRzVAEKECdq~4UAccxZ1MIo1-A-fhsBqb8ZS0n7wqeimPFimgq~Tvi3nmiI1h0ud7eNh7JSaDQ-WPdIKRACOPEd1m1w5EP79NqgUuSlQvuKxnHvORaWwdTcZW0EtLpYk5-TtJWxU5szujvlrFCnSeFDeDWpX5darWr~O8Q35NfZaUsi0N8yCw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA) for more details).
+
+  --lambda_J LAMBDA_J   Value of couplings penalizing constant for L2
+                        regularization of couplings.
 `--lambda_h`
 
 
