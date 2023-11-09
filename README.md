@@ -17,35 +17,7 @@ To install the current version of `pycofitness` from PyPI, run on the command li
 $ pip install pycofitness
 ```
 
-# Using `pycofitness` as a Python library
-After installation, `pycofitness` can be imported into other Python source codes and used. For example,  
 
-```python 
-from pycofitness.mutation import PointMutation
-
-point_mutation = PointMutation(msa_file, biomolecule)
-deltas = point_mutation.delphi_epistatic()
-#Print the values of delta_dict by iteration over sites and bases/residues
-
-for i in range(len(deltas)):
-    for res in deltas[i]:
-        print(i + 1, res, deltas[i][res])
-#Note: we added 1 to i to count sites starting from one instead of zero.
-```
-We can also pass parameters such as the number of iterations, the number of threads for parallel execution, and so on, as 
-keyword arguments to the `PointMutation` constructor:
-```python 
-point_mutation = PointMutation(msa_file, biomolecule,
-    max_iterations = 1000,
-    num_threads = 4,
-    seqid = 0.9,
-    lambda_J = 10.0,
-    lambda_h = 5.0,
-    verbose = True
-)
-```
-where `max_iterations` is the number of maximum iterations for gradient descent, `num_threads` is the number of 
-threads for parallel execution, `seqid` is the sequence identity threshold value (if sequences have similarity more than this value, they are regarded as the same), `lambda_J` and `lambda_h` are penalizing constants for L2 regularization. If `verbose` is set to `True,` logging information is enabled.
 
 # Running `pycofitness` from the command line
 When `pycofitness` is installed, it provides a command `pycofitness` that can be executed from the command line.
@@ -77,6 +49,36 @@ Information about command line options can be obtained using:
 ```bash
 $ pycofitness --help
 ```
+
+# Using `pycofitness` as a Python library
+After installation, `pycofitness` can be imported into other Python source codes and used. For example,  
+
+```python 
+from pycofitness.mutation import PointMutation
+
+point_mutation = PointMutation(msa_file, biomolecule)
+deltas = point_mutation.delphi_epistatic()
+#Print the values of delta_dict by iteration over sites and bases/residues
+
+for i in range(len(deltas)):
+    for res in deltas[i]:
+        print(i + 1, res, deltas[i][res])
+#Note: we added 1 to i to count sites starting from one instead of zero.
+```
+We can also pass parameters such as the number of iterations, the number of threads for parallel execution, and so on, as 
+keyword arguments to the `PointMutation` constructor:
+```python 
+point_mutation = PointMutation(msa_file, biomolecule,
+    max_iterations = 1000,
+    num_threads = 4,
+    seqid = 0.9,
+    lambda_J = 10.0,
+    lambda_h = 5.0,
+    verbose = True
+)
+```
+where `max_iterations` is the number of maximum iterations for gradient descent, `num_threads` is the number of 
+threads for parallel execution, `seqid` is the sequence identity threshold value (if sequences have similarity more than this value, they are regarded as the same), `lambda_J` and `lambda_h` are penalizing constants for L2 regularization. If `verbose` is set to `True,` logging information is enabled.
 
 # Preprocessing input MSAs
 
