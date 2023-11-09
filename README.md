@@ -3,7 +3,7 @@
 
 
 # About `pycofitness`
-`pycofitness` is a Python implementation of *in silico* mutagenesis for multiple sequence alignments (MSA) of protein or RNA sequence families using **__pseudolikelihood maximization__**  direct couplings analysis (DCA) algorithm. The input file for `pycofitness` must be an MSA of sequences in fasta format, with the first sequence representing the reference sequence. The software provides command line utilities, or it can be used as a Python library. 
+`pycofitness` is a Python implementation of *in silico* mutagenesis for a target protein or RNA sequence given in input the multiple sequence alignments (MSA) of its homologous sequences. It employs **__pseudolikelihood maximization__**  direct couplings analysis (DCA) algorithm. The input file for `pycofitness` must be an MSA of sequences in fasta format, with the first sequence representing the sequence to mutate. The output consist in the change of fitness for all single site variant of the target sequence. The software provides command line utilities, or it can be used as a Python library. 
 
 # Prerequisites
 `pycofitness` is implemented mainly in Python with the pseudolikelihood maximization parameter inference part implemented using C++ backend to enable parallelization. It requires: 
@@ -84,4 +84,7 @@ threads for parallel execution, `seqid` is the sequence identity threshold value
 
 The input data for pycofitness is an MSA file in FASTA format. We chose not to include tools to generate MSA in pycofitness because, in this way, users can employ
 their favorite MSA methods. There is only one compulsory adjustment within the input MSA: the sequence
-to mutate (the reference sequence) has to be positioned as the first one in the MSA. Also, pycofitness removes MSA columns containing non-standard residues and gaps at the reference sequence.
+to mutate (the reference sequence) has to be positioned as the first one in the MSA. Also, pycofitness removes MSA columns containing non-standard
+residues and gaps at the reference sequence.
+
+# Results interpretation
