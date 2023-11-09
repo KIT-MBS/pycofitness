@@ -48,7 +48,7 @@ The optional arguments of pycofitness input are:
 
 `--lambda_J LAMBDA_J:` Value of penalizing constant for L2 regularization of couplings in the pseudolikelyhood maximization DCA inference step (see [here](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bioinformatics/36/7/10.1093_bioinformatics_btz892/2/bioinformatics_36_7_2264_s2.pdf?Expires=1702572670&Signature=02fkMyK1WmMFw69v-CfRjpNnzeLsLetV7xNIyi6RGIbgMYTyWjckjd4jxtF6XseVwe5E8JL2v4mWdUXm26C5pMtl5zlaN8zrWDanolXkgLI6dMK~9DvP-mZtEbQus49g34~wi7w~nXbBBtdzzlyFYLTlM1HIMn8i2TRzVAEKECdq~4UAccxZ1MIo1-A-fhsBqb8ZS0n7wqeimPFimgq~Tvi3nmiI1h0ud7eNh7JSaDQ-WPdIKRACOPEd1m1w5EP79NqgUuSlQvuKxnHvORaWwdTcZW0EtLpYk5-TtJWxU5szujvlrFCnSeFDeDWpX5darWr~O8Q35NfZaUsi0N8yCw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA) for more details).
 
-`--max_iterations MAX_ITERATIONS: ` Maximum number of iterations for gradient descent in the negative pseudolikelihood minimization step.
+`--max_iterations MAX_ITERATIONS:` Maximum number of iterations for the gradient descent in the negative pseudolikelihood minimization step.
 
  `--num_threads NUM_THREADS:` Number of threads used in the computation.
 
