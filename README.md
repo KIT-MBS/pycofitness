@@ -5,7 +5,7 @@
 # About `pycofitness`
 `pycofitness` is a Python implementation of *in silico* mutagenesis of a target protein or RNA sequence given in input the multiple sequence alignments (MSA) of its homologous sequences. It employs a **__pseudolikelihood maximization__**  direct couplings analysis (DCA) algorithm to infer a coevolutionary energy and then use it to predict the impact of all single site mutations of the target protein. 
 
-The input file for `pycofitness` must be an MSA of sequences in fasta format, with the first sequence representing the sequence to mutate. The output consist of a .txt file reporting the change of fitness for all single site variant of the protein. 
+The input file for `pycofitness` must be an MSA of sequences in fasta format, with the first sequence representing the sequence to mutate. The output consist of a txt file reporting the change of fitness for all single site variant of the protein. 
 
 More information about pycofitness can be found in the [associated paper](www.google.it). Please cite xxx if you use pycofitness.
 
