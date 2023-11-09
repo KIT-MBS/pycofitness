@@ -40,7 +40,7 @@ $ pycofitness <biomolecule> <msa_file> [--optional_arguments]
 where `<biomolecule>` refers to values "protein" or "RNA" (case insensitive) and `<msa_file>` is the MSA file in the fasta format. 
 The optional arguments of pycofitness input are:
 
-`-h, --help:` show the help message
+`-h, --help:` show these information about command line
 
 `--seqid SEQID:` Cut-off value of sequences similarity above which sequences are lumped together in the calculation of frequencies.
 
@@ -56,11 +56,6 @@ The optional arguments of pycofitness input are:
 
  `--verbose:` Show logging information on the terminal.
  
-
-Information about command line options can be obtained using: 
-```bash
-$ pycofitness --help
-```
 
 # Using `pycofitness` as a Python library
 After installation, `pycofitness` can be imported into other Python source codes and used. For example,  
