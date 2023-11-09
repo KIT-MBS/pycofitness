@@ -54,6 +54,18 @@ For example:
 $ pycofitness <biomolecule> <msa_file> --num_threads=4 --verbose
 ``` 
 where `<biomolecule>` refers to values "protein" or "RNA" (case insensitive) and `<msa_file>` is the MSA file in the fasta format. 
+The optional arguments that pycofitness input command has are listed here:
+
+`--num_threads`
+`--verbose`
+`--lambda_J`
+`--lambda_h`
+
+
+
+
+
+
 
 Information about command line options can be obtained using: 
 ```bash
