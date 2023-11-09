@@ -3,7 +3,7 @@
 
 
 # About `pycofitness`
-`pycofitness` is a Python implementation of *in silico* mutagenesis for a target protein or RNA sequence given in input the multiple sequence alignments (MSA) of its homologous sequences. It employs **__pseudolikelihood maximization__**  direct couplings analysis (DCA) algorithm. The input file for `pycofitness` must be an MSA of sequences in fasta format, with the first sequence representing the sequence to mutate. The output consist in the change of fitness for all single site variant of the target sequence. The software provides command line utilities, or it can be used as a Python library. 
+`pycofitness` is a Python implementation of *in silico* mutagenesis of a target protein or RNA sequence given in input the multiple sequence alignments (MSA) of its homologous sequences. It employs a **__pseudolikelihood maximization__**  direct couplings analysis (DCA) algorithm to infer a coevolutionary energy and then use it to predict the impact of single site mutations. The input file for `pycofitness` must be an MSA of sequences in fasta format, with the first sequence representing the sequence to mutate. The output consist in the change of fitness for all single site variant of the target sequence. The software provides command line utilities, or it can be used as a Python library. 
 
 # Prerequisites
 `pycofitness` is implemented mainly in Python with the pseudolikelihood maximization parameter inference part implemented using C++ backend to enable parallelization. It requires: 
