@@ -35,10 +35,10 @@ $ python setup.py install
 When `pycofitness` is installed, it provides a command `pycofitness` that can be executed from the command line.
 For example:
 ```bash
-$ pycofitness <biomolecule> <msa_file> --num_threads=4 --verbose
+$ pycofitness <biomolecule> <msa_file> [--optional_arguments]
 ``` 
 where `<biomolecule>` refers to values "protein" or "RNA" (case insensitive) and `<msa_file>` is the MSA file in the fasta format. 
-The optional arguments that pycofitness input command has are listed here:
+The optional arguments of pycofitness input are:
 
 `-h, --help:` show the help message
 
