@@ -97,17 +97,7 @@ to mutate (the reference sequence) has to be positioned as the first one in the 
 
 Here few line example of the txt file that there is as output in pycoftines:
 
-#site	reference	alternative	score<br> 1	M	A	-0.14<br>
-
-1	M	C	-3.54
-
-1	M	D	-5.12
-
-1	M	E	-7.64
-
-....
-
-....
+#site	reference	alternative	score<br> 1	M	A	-0.14<br>1	M	C	-3.54<br>1	M	D	-5.12<br>1	M	E	-7.64<br>....<br>....<br>
 
 The first column is the position in the reference sequence, the second column is the wild type aminoacid and the third one is the subsituted one. Finally in the last column the pycofitness score is provided. Negative values of this score correspond to variants that are less fit with respect of the wild type protein while positive value means that they are more fit than wilt type.
 
