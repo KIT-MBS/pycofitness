@@ -107,7 +107,7 @@ class ObjectiveFunction{
                 g           : Array of gradient of the negative log pseudolikelihood
                     of the conditional probablity for protein/RNA alignments.
                 n           : Number of fields and couplings?
-                step        : The step size for gradient decent.
+                step        : The step size for gradient descent.
 
             Returns
             --------
@@ -166,7 +166,7 @@ extern "C" float* plmdcaBackend(unsigned short const biomolecule,
         seqid           : Sequence identity threshold.
         lambda_h        : Regularization parameter for fields.
         lambda_J        : Regularization parameter for couplings.
-        max_iteration   : Maximum number of gradient decent iterations.
+        max_iteration   : Maximum number of gradient descent iterations.
         num_threads     : Number of threads for PlmDCA (when OpenMP is supported).
         verbose         : Print logging message on the terminal.
 
