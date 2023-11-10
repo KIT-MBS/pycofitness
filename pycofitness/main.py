@@ -36,7 +36,7 @@ class CmdArgs:
     regularization of couplings.
     """
     max_iterations_optional = '--max_iterations'
-    max_iterations_help = """Number of iterations for gradient decent 
+    max_iterations_help = """Number of iterations for gradient descent 
     for negative pseudolikelihood minimization.
     """
     num_threads_optional = '--num_threads'
