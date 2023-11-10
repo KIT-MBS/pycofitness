@@ -95,7 +95,7 @@ to mutate (the reference sequence) has to be positioned as the first one in the 
 
 # Results interpretation
 
-Here few line example of the txt file that there is as output in pycoftines:
+Here a few line example of pycofitness output file:
 
 #site	reference	alternative	score<br> 1	M	A	-0.14<br>1	M	C	-3.54<br>1	M	D	-5.12<br>1	M	E	-7.64<br>....<br>....<br>
 
