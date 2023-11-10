@@ -7,7 +7,7 @@ import numpy as np
 
 
 """Python wrapper for psuedolikelihood maximization direct coupling analysis (plmDCA).
-The gradient decent algorithm is implemented using c++ backend.
+The gradient descent algorithm is implemented using c++ backend.
 
 Authors: Mehari B. Zerihun, Fabrizio Pucci
 """
@@ -91,7 +91,7 @@ class PlmDCA:
             sequence identity: {}
             lambda_h: {}
             lambda_J: {}
-            gradient decent iterations: {}
+            gradient descent iterations: {}
             number of threads: {}
         """.format(self.__biomolecule, self.__seqs_len, self.__num_seqs, 
             self.__seqid, self.__lambda_h, self.__lambda_J, self.__max_iterations,
@@ -209,7 +209,7 @@ class PlmDCA:
             fields_and_couplings : np.array
                 A one-dimensional array of the fields and couplings
         """
-        logger.info('\n\tComputing fields and couplings using gradient decent')
+        logger.info('\n\tComputing fields and couplings using gradient descent')
         h_J_ptr = self.__plmdcaBackend(
             self.__biomolecule_int, self.__num_site_states, self.__msa_file.encode('utf-8'), 
             self.__seqs_len,  self.__seqid, self.__lambda_h, self.__lambda_J, self.__max_iterations,
