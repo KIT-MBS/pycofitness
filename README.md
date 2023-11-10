@@ -94,3 +94,17 @@ their favorite MSA alignment and curation methods. There is only one compulsory 
 to mutate (the reference sequence) has to be positioned as the first one in the MSA. Note that pycofitness automatically removes MSA columns containing non-standard residues and gaps at the reference sequence.
 
 # Results interpretation
+
+Here few line example of the txt file that there is as output in pycoftines:
+
+#site	reference	alternative	score
+1	M	A	-0.14
+1	M	C	-3.54
+1	M	D	-5.12
+1	M	E	-7.64
+....
+....
+
+The first column is the position in the reference sequence, the second column is the wild type aminoacid and the third one is the subsituted one. Finally in the last column the pycofitness score is provided. Negative values of this score correspond to variants that are less fit with respect of the wild type protein while positive value means that they are more fit than wilt type.
+
+
