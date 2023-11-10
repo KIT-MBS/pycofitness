@@ -90,8 +90,7 @@ threads for parallel execution, `seqid` is the sequence identity threshold value
 # Preprocessing input MSAs
 
 The input data for pycofitness is an MSA file in FASTA format. We chose not to include tools to generate MSA in pycofitness because, in this way, users can employ
-their favorite MSA methods. There is only one compulsory adjustment within the input MSA: the sequence
-to mutate (the reference sequence) has to be positioned as the first one in the MSA. Also, pycofitness removes MSA columns containing non-standard
-residues and gaps at the reference sequence.
+their favorite MSA alignment and curation methods. There is only one compulsory adjustment within the input MSA: the sequence
+to mutate (the reference sequence) has to be positioned as the first one in the MSA. Note that pycofitness automatically removes MSA columns containing non-standard residues and gaps at the reference sequence.
 
 # Results interpretation
