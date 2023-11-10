@@ -97,9 +97,7 @@ to mutate (the reference sequence) has to be positioned as the first one in the 
 
 Here few line example of the txt file that there is as output in pycoftines:
 
-#site	reference	alternative	score
-
-1	M	A	-0.14
+#site	reference	alternative	score<br> 1	M	A	-0.14<br>
 
 1	M	C	-3.54
 
