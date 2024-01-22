@@ -112,7 +112,6 @@ def run_mutation():
     parser.add_argument(CmdArgs.num_threads_optional, help=CmdArgs.num_threads_help, type=int)
     parser.add_argument(CmdArgs.verbose_optional, help=CmdArgs.verbose_optional_help, action='store_true')
     parser.add_argument(CmdArgs.output_dir_optional, help=CmdArgs.output_dir_help)
-    parser.add_argument(CmdArgs.indsite_optional, help=CmdArgs.indsite_help, action='store_true' )   
     args = parser.parse_args(args=None if sys.argv[1:] else ['--help'])
     args_dict = vars(args)
     
