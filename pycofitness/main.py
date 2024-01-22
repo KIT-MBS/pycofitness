@@ -47,8 +47,6 @@ class CmdArgs:
     is created using the base name of the MSA file, with "output_" prefix
     added to it.
     """     
-    indsite_optional = '--indsite'
-    indsite_help = 'Use the independent site model. This computes the change in the DCA Hamiltonian from single site frequenceis.'
 #End of class CmdArgs
 
 logger = logging.getLogger(__name__)
