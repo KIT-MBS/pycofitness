@@ -124,8 +124,7 @@ def run_mutation():
         max_iterations = args_dict.get('max_iterations'),
         num_threads = args_dict.get('num_threads'),
         output_dir = args_dict.get('output_dir'),
-        verbose = args_dict.get('verbose'),
-        indsite= args_dict.get('indsite'),
+        verbose = args_dict.get('verbose')
     )
 
     
