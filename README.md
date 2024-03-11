@@ -7,7 +7,7 @@
 
 The input file for `pycofitness` must be an MSA  in FASTA format, with the first sequence representing the target sequence to mutate. The output consists of a txt file reporting the change of fitness for all single-site variants of the target. 
 
-More information about pycofitness can be found in the [associated paper](www.google.it). When using pycofitness, please cite F. Pucci, M. Zerihun, M. Rooman, A. Schug, *"pycofitness---Evaluating the fitness landscape of RNA and protein sequences"*, Bioinformatics, submitted (2023). 
+More information about pycofitness can be found in the [associated paper](https://academic.oup.com/bioinformatics/article/40/2/btae074/7604531). When using pycofitness, please cite F. Pucci, M. Zerihun, M. Rooman, A. Schug, *"pycofitness---Evaluating the fitness landscape of RNA and protein sequences"*, Bioinformatics 40, btae074 (2024).
 
 # Prerequisites
 `pycofitness` is implemented mainly in Python, with the pseudolikelihood maximization parameter inference part implemented using C++ backend to enable parallelization. It requires: 
