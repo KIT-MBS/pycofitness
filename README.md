@@ -101,4 +101,8 @@ Here is a few-line example of a pycofitness output file:
 
 The first column is the position in the target sequence, the second column is the wild-type amino acid or nucleic acid base, and the third column is the substituted amino acid or nucleic acid base. In the last column, the pycofitness score is provided. Negative values of this score correspond to variants that are less fit than the wild type, and  positive values mean variants that  are  fitter than wild type.
 
+# Version update
+
+Modifications in version 1.4: The default regularization parameters have been changed to lambda_J = 6.0*(L-1) and lambda_h = 10.0.  
+
 
