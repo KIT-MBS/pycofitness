@@ -32,7 +32,7 @@ plmdca_ext = Extension(
 
 setup(
     name="pycofitness",
-    version="1.3",
+    version="1.4",
     author="Fabrizio Pucci, Mehari B. Zerihun",
     author_email="Fabrizio.Pucci@ulb.be, mbzerihun@gmail.com",
     python_requires=">=3.6",
