@@ -54,6 +54,8 @@ The optional arguments of pycofitness input are:
 
  `--output_dir OUTPUT_DIR:` Directory path to which output results are written. If the directory is not existing, it is created. If this path is not provided, an output directory is created using the base name of the MSA file, with the "output_" prefix added to it.
 
+  `--hJ_path hJ_PATH:` File path to save h and J coefficients (optional, they will not be saved by default).
+
  `--verbose:` Show logging information on the terminal.
  
 
@@ -81,11 +83,12 @@ point_mutation = PointMutation(msa_file, biomolecule,
     seqid = 0.9,
     lambda_J = 10.0,
     lambda_h = 5.0,
+    hJ_path = './hJ_coeff.txt',
     verbose = True
 )
 ```
 where `max_iterations` is the number of maximum iterations for gradient descent, `num_threads` is the number of 
-threads for parallel execution, `seqid` is the sequence identity threshold value (if sequences have a higher similarity  than this value, they are regarded as identical), `lambda_J` and `lambda_h` are penalizing constants for L2 regularization. If `verbose` is set to `True,` logging information is given.
+threads for parallel execution, `seqid` is the sequence identity threshold value (if sequences have a higher similarity  than this value, they are regarded as identical), `lambda_J` and `lambda_h` are penalizing constants for L2 regularization, `hJ_path` is the file path where the coefficients h and J will be saved. If `verbose` is set to `True,` logging information is given.
 
 # Preprocessing input MSAs
 

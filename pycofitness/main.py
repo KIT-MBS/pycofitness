@@ -46,7 +46,10 @@ class CmdArgs:
     If the directory is not existing, it will be created. If this path is not provided, an output directory
     is created using the base name of the MSA file, with "output_" prefix
     added to it.
-    """     
+    """
+    hJ_path_optional = '--hJ_path'
+    hJ_path_optional_help = """File path to save h and J coefficients (optional).
+    """
 #End of class CmdArgs
 
 logger = logging.getLogger(__name__)
@@ -70,7 +73,7 @@ def configure_logging():
 def execute_from_command_line(biomolecule, msa_file, 
         seqid = None, lambda_h = None, lambda_J = None, 
         max_iterations = None ,verbose = False, output_dir = None,
-        num_threads = None, indsite=False):
+        num_threads = None, indsite=False, hJ_path = None):
     
     if verbose : configure_logging()
     
@@ -78,7 +81,7 @@ def execute_from_command_line(biomolecule, msa_file,
         lambda_J=lambda_J, num_threads=num_threads,
         max_iterations=max_iterations, verbose=verbose
     )
-    delphi_dict = mut_inst.delphi_independent_site() if indsite else mut_inst.delphi_epistatic()
+    delphi_dict = mut_inst.delphi_independent_site(save_path=hJ_path) if indsite else mut_inst.delphi_epistatic(save_path=hJ_path)
     if output_dir:
         dir_output = pathlib.Path(output_dir)
         dir_output.mkdir()
@@ -112,6 +115,7 @@ def run_mutation():
     parser.add_argument(CmdArgs.num_threads_optional, help=CmdArgs.num_threads_help, type=int)
     parser.add_argument(CmdArgs.verbose_optional, help=CmdArgs.verbose_optional_help, action='store_true')
     parser.add_argument(CmdArgs.output_dir_optional, help=CmdArgs.output_dir_help)
+    parser.add_argument(CmdArgs.hJ_path_optional, help=CmdArgs.hJ_path_optional_help)
     args = parser.parse_args(args=None if sys.argv[1:] else ['--help'])
     args_dict = vars(args)
     
@@ -124,6 +128,7 @@ def run_mutation():
         max_iterations = args_dict.get('max_iterations'),
         num_threads = args_dict.get('num_threads'),
         output_dir = args_dict.get('output_dir'),
+        hJ_path = args_dict.get('hJ_path'),
         verbose = args_dict.get('verbose')
     )
 

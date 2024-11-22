@@ -1,3 +1,4 @@
+from typing import Union
 from Bio import AlignIO
 import numpy as np 
 from pycofitness.fasta_reader.fasta_reader import get_alignment_from_fasta_file
@@ -218,9 +219,13 @@ class PointMutation:
         return None 
     
     
-    def delphi_epistatic(self):
+    def delphi_epistatic(self, save_path: Union[None, str]=None):
         """change in energy function is computed from fields and couplings
         """ 
+
+        # Init container for h and J coefficients
+        hJ_coeff_lines = []
+
         self.initialize_fields_and_couplings()
         logger.info('\n\tPerforming epistatic model point mutation for sequence\n\t{}'.format(self.__refseq))
         res_mapping =  residue_mapping[self.__biomolecule]
@@ -247,6 +252,7 @@ class PointMutation:
                     k_background = couplings_loc_ij + res_mapping[res_background] + res_mapping[res_at_j] * self.__qm1 
                     delta_Jij = self.__couplings[k_mutant] - self.__couplings[k_background]
                     delta_Jij_total += delta_Jij
+                    hJ_coeff_lines.append(f"{b} {i+1} {j+1} {delta_hi_ba} {delta_Jij}") # add +1 to residue-ids to match the fasta format conventions
                 for j in range(i + 1, self.__num_sites): # j > i sites
                     res_at_j = self.__refseq[j]
                     if res_at_j not in list_of_standard_residues: continue 
@@ -255,14 +261,25 @@ class PointMutation:
                     k_background = couplings_loc_ij + res_mapping[res_at_j] + res_mapping[res_background] * self.__qm1
                     delta_Jij = self.__couplings[k_mutant] - self.__couplings[k_background]
                     delta_Jij_total += delta_Jij
+                    hJ_coeff_lines.append(f"{b} {i+1} {j+1} {delta_hi_ba} {delta_Jij}") # add +1 to residue-ids to match the fasta format conventions
                 deltaPhi = delta_Jij_total + delta_hi_ba
                 mut_data[i][b] = deltaPhi
+
+        # Save file of h and J coefficients if required
+        if save_path is not None:
+            with open(save_path, "w") as fs:
+                fs.write("\n".join(hJ_coeff_lines))
+
         return mut_data                         
 
 
-    def delphi_independent_site(self, pseudocount=None):
+    def delphi_independent_site(self, pseudocount=None, save_path: Union[None, str]=None):
         """ 
         """
+
+        # Init container for h coefficients
+        h_coeff_lines = []
+
         alignment_data = alignment_letter2int(self.__msa_file, biomolecule=self.__biomolecule)
         res2int = residue_mapping[self.__biomolecule]
         res2lett = {val: key for (key, val) in res2int.items()}
@@ -289,6 +306,13 @@ class PointMutation:
                 b = res2lett[mut_allele_indx]
                 curr_delta = fields_vec[i, mut_allele_indx] - fields_vec[i, ref_allele_indx]
                 deltas_dict[i][b] = curr_delta
+                h_coeff_lines.append(f"{b} {i+1} {curr_delta}") # add +1 to residue-ids to match the fasta format conventions
+
+        # Save file of h coefficients if required
+        if save_path is not None:
+            with open(save_path, "w") as fs:
+                fs.write("\n".join(h_coeff_lines))
+
         return deltas_dict
                 
                 
